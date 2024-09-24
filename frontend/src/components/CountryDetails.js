@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import PopulationChart from './PopulationChart'; 
+import './CountryDetails.css';
 
 function CountryDetails() {
   const { countryCode } = useParams();
@@ -21,7 +22,7 @@ function CountryDetails() {
   }
 
   return (
-    <div>
+    <div className="country-details">
       <h1>{countryData.countryInfo.commonName}</h1>
       <img src={countryData.flagUrl} alt={`${countryData.countryInfo.commonName} flag`} width="500" height="300" />
 

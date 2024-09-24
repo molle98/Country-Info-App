@@ -7,7 +7,6 @@ function App() {
   return (
     <Router>
       <div>
-        <h1>Country List</h1>
         <Routes>
           <Route path="/" element={<CountryList />} />
           <Route path="/country/:countryCode" element={<CountryDetails />} />
