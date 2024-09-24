@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { useParams, Link } from 'react-router-dom'; // Importa Link para hacer los países clicables
-import PopulationChart from './PopulationChart'; // Importa el gráfico de población
+import { useParams, Link } from 'react-router-dom';
+import PopulationChart from './PopulationChart'; 
 
 function CountryDetails() {
   const { countryCode } = useParams();
@@ -10,7 +10,7 @@ function CountryDetails() {
     fetch(`http://localhost:5000/api/countries/${countryCode}`)
       .then((response) => response.json())
       .then((data) => {
-        console.log('Country Data:', data); // Log para verificar los datos
+        console.log('Country Data:', data); 
         setCountryData(data);
       })
       .catch((error) => console.error('Error fetching country data:', error));
@@ -29,7 +29,6 @@ function CountryDetails() {
       <ul>
         {countryData.countryInfo.borders.map((border) => (
           <li key={border.countryCode}>
-            {/* Aquí utilizamos Link para que cada país fronterizo sea clicable */}
             <Link to={`/country/${border.countryCode}`}>
               {border.commonName}
             </Link>

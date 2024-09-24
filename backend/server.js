@@ -5,6 +5,7 @@ import fetch from 'node-fetch';
 const app = express();
 app.use(cors());
 
+//I included some countries, because on the population API, codes are of three letters, and on the available countries one, it is two letters.
 const iso2ToIso3 = {
   AF: 'AFG',
   AL: 'ALB',
