@@ -18,3 +18,6 @@ Next, navigate to the `frontend` folder, install the dependencies with `npm inst
 ## Usage
 
 Once both servers are running, visit [http://localhost:3000](http://localhost:3000) to use the app. The frontend communicates with the backend via [http://localhost:5000](http://localhost:5000).
+
+## Note
+Most countries work fine with the API, but some are not being recognized properly. I'm not sure why this is happening, but it seems to be an issue with certain country codes or API responses.
